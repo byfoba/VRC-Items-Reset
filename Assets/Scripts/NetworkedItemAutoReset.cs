@@ -124,12 +124,9 @@ public class NetworkedItemAutoReset : UdonSharpBehaviour
         if (objectSync != null)
         {
             objectSync.FlagDiscontinuity();
-            objectSync.TeleportTo(startPosition, startRotation);
         }
-        else
-        {
-            transform.SetPositionAndRotation(startPosition, startRotation);
-        }
+
+        transform.SetPositionAndRotation(startPosition, startRotation);
 
         if (rb != null && zeroVelocityOnReset)
         {
